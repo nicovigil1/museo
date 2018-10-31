@@ -127,6 +127,10 @@ class CuratorTest < Minitest::Test
     assert (curator.artists.length > 0)
   end
 
+  def test_it_can_find_photos_in_year_range
+    assert_equal [@photo_1_object, @photo_4_object], @curator_2.photographs_taken_between(1950..1965)
+  end
+
 
 
 end
