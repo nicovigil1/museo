@@ -131,6 +131,9 @@ class CuratorTest < Minitest::Test
     assert_equal [@photo_1_object, @photo_4_object], @curator_2.photographs_taken_between(1950..1965)
   end
 
-
+  def test_it_can_find_photographs_from_artists_by_age
+    expected = {44=>"Identical Twins, Roselle, New Jersey", 39=>"Child with Toy Hand Grenade in Central Park"}
+    assert_equal expected, @curator_2.artists_photographs_by_age(@Diane)
+  end
 
 end
