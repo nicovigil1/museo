@@ -79,7 +79,9 @@ class Curator
   def artists_photographs_by_age(artist)
     age_to_photo = {}
     artist_photos = find_photographs_by_artist(artist)
-    # artist_photos.each do |photo|
-
+    artist_photos.each do |photo|
+      age_to_photo[photo_age(photo)] = photo.name
+    end
+    age_to_photo
   end
 end

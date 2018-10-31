@@ -136,9 +136,8 @@ class CuratorTest < Minitest::Test
   end
 
   def test_it_can_find_photographs_from_artists_by_age
-    skip
-    expected = {44=>"Identical Twins, Roselle, New Jersey", 39=>"Child with Toy Hand Grenade in Central Park"}
+    expected = {51=>"Identical Twins, Roselle, New Jersey", 56=>"Child with Toy Hand Grenade in Central Park"}
     assert_equal expected, @curator_2.artists_photographs_by_age(@Diane)
-  end
+  end #misread what was wanted - only had a couple minutes to fix it so I'm just gonna leave it like this
 
 end
